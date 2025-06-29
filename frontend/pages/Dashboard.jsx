@@ -12,7 +12,8 @@ import {
   CheckCircle,
   Syringe,
   Lock,
-  Brain
+  Brain,
+  CalendarClock
 } from 'lucide-react';
 
 export const Dashboard = () => {
@@ -64,12 +65,7 @@ export const Dashboard = () => {
           <h1 className="text-3xl font-bold  flex">Dashboard</h1>
           <p className=" mt-1">Welcome back! Here's your health monitoring overview.</p>
         </div>
-        <div className="flex gap-2">
-          <Button onClick={() => navigate('/checkup')} >
-            <Syringe className="mr-2 h-4 w-4" />
-            Health Checkup
-          </Button>
-        </div>
+
       </div>
 
       {/* Stats Cards */}
@@ -97,19 +93,19 @@ export const Dashboard = () => {
 
           {/* Upload Reports */}
           <Card
-            onClick={() => navigate('/upload')}
-            className="cursor-pointer hover:shadow-lg transition-shadow duration-200"
-          >
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-lg font-medium">Upload Reports</CardTitle>
-              <FileHeart className="h-5 w-5 text-primary" />
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
-                Upload your health documents for review by our team.
-              </p>
-            </CardContent>
-          </Card>
+  onClick={() => navigate('/upload')}
+  className="cursor-pointer hover:shadow-lg transition-shadow duration-200"
+>
+  <CardHeader className="flex flex-row items-center justify-between pb-2">
+    <CardTitle className="text-lg font-medium">Setup Notifications</CardTitle>
+    <CalendarClock className="h-5 w-5 text-primary" />
+  </CardHeader>
+  <CardContent>
+    <p className="text-sm text-muted-foreground">
+      Configure medication reminders based on your schedule and prescriptions.
+    </p>
+  </CardContent>
+</Card>
 
           {/* Health Timeline (Locked) */}
           <Card className="relative overflow-hidden group">
