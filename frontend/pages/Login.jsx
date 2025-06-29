@@ -10,7 +10,7 @@ import {
 } from '../components/ui/tabs';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://ea00-45-64-237-226.ngrok-free.app';
 
 const Login = () => {
   const [signupData, setSignupData] = useState({ username: '', email: '', password: '' });
