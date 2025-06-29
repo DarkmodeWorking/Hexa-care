@@ -12,20 +12,20 @@ import MedicationTracking from "../pages/MedicationTracking"
 
 
 const appRouter = createBrowserRouter([
-	{
-		path: '/',
-		element: <MainLayout />,
+  {
+    path: '/',
+    element: <MainLayout />,
     children: [
       {
         path: '/',
-        element: 
+        element:
           <>
             <Landing />
           </>
       },
       {
         path: '/login',
-        element: 
+        element:
           <>
             <Login />
           </>
@@ -50,11 +50,11 @@ const appRouter = createBrowserRouter([
           <>
             <Notification />
           </>
-      },{
-      path: '/upload',
+      }, {
+        path: '/upload',
         element:
           <>
-            <Upload /> 
+            <Upload />
           </>
       },
       {
@@ -63,11 +63,10 @@ const appRouter = createBrowserRouter([
         element:
           <>
             <MedicationTracking />
-
           </>
       }
     ]
-	}
+  }
 ])
 
 function App() {
@@ -79,7 +78,7 @@ function App() {
         <RouterProvider router={appRouter} />
 
       </ThemeProvider>
-      
+
     </>
   )
 }
